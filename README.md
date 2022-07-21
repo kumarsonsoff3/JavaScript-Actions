@@ -222,7 +222,7 @@ Our action does not require much metadata for it to run correctly. We will not b
 
 </details>
   
-<details id=4 open>
+<details id=4>
 <summary><h2> Step 4: Create the JavaScript files for your action</h2></summary>
 
 ## Files
@@ -384,7 +384,7 @@ _Don't forget to call the `run()` function._
 
 </details>
   
-<details id=5>
+<details id=5 open>
 <summary><h2> Step 5: Add your action to the workflow file</h2></summary>
 
 ### Great job!
