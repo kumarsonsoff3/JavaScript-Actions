@@ -5,8 +5,32 @@
   Next to "About", add description & tags; disable releases, packages, & environments.
   Add your open source license, GitHub uses Creative Commons Attribution 4.0 International.
 -->
+<p align="center">
+  <a href="https://twitter.com/Kumar_Sons_off" target="_blank" rel="noopener noreferrer">
+     <img alt="Twitter" src="https://img.shields.io/badge/Twitter-Priyanshu%20-blue?logo=twitter&logocolor=blue&color=blue">
+   </a>
+   
+   <a href="https://hashnode.com/@Kumarsonsoff3" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/Priyanshu%20Kumawat-purple?logo=hashnode&logoColor=darkblue&color=white" />
+   </a>
+   
+  <a href="https://www.instagram.com/Priyanshu_kumawat_off/" target="_blank" rel="noopener noreferrer">
+     <img alt="Instagram" src="https://img.shields.io/badge/Priyanshu%20Kumawat-blue?logo=instagram&logocolor=Pink&color=white">
+   </a>
+   
+   <a href="https://linkedin.com/in/kumarsonsoff" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/LinkedIn-Priyanshu%20Kumawat-purple?logo=linkedin&logoColor=blue&color=blue" />
+   </a>
+</p>   
 
-# GitHub Actions: Writing JavaScript Actions
+
+# Explored about the GitHub workFlows and Actions
+
+- This Repository is generated from the GitHub Skills 
+- Code Followed their style! 
+- Node Modules are not added to the `.gitignore`
+- Here as you Trigger the workFlow, it will show a Joke in your Console. 😅
+- To Trigger the `Joke-Action` go the [Step 6.]("#trigger")
 
 
 <!--
@@ -20,12 +44,8 @@
 
 <!--step0-->
 
-Write your own GitHub JavaScript Action and automate customized tasks unique to your workflow.
+<hr/>
 
-- **Who is this for**: Developers, GitHub users, users new to Git, students, managers, and for teams.
-- **What you'll learn**: How to consume actions within a workflow file, create custom JavaScript based actions and publish your newly created action to the marketplace.
-- **Prerequisites**: Before you start, you should be familiar with GitHub, GitHub Actions, and Continuous Integration with GitHub Actions.
-- **How long**: This course is 6 steps long and takes about 1 to 2 hours to be completed. 
 
 ## How to start this course
 
@@ -419,7 +439,7 @@ jobs:
   
 <details id=6>
 
-<summary><h2> Step 6: Trigger the joke action</h2></summary>
+<summary><h2 id="trigger"> Step 6: Trigger the joke action</h2></summary>
 
 ### Great job! 
 Everything is all set up and now we are ready to start laughing. You will find you have some joke related labels available to you in this repository. You don't have to use them, any label will trigger our workflow, but the easiest way to follow along would be to use suggested labels.
