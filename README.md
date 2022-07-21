@@ -130,7 +130,7 @@ Once you have the necessary tools installed locally, follow these steps to begin
 
 </details>
   
-<details id=2 open>
+<details id=2>
 <summary><h2> Step 2: Configure Your Action</h2></summary>
 
 ### Excellent!
@@ -165,7 +165,7 @@ We will start with using the parameters that are **required** and later implemen
 
 </details>
   
-<details id=3>
+<details id=3 open>
 <summary><h2> Step 3: Create the metadata file</h2></summary>
 
 ## Action metadata
