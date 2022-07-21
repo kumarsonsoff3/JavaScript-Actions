@@ -1,0 +1,71 @@
+name: Step 6, Trigger Your Action
+
+# This step triggers after TBD-step-3-event-desc
+# This step sets STEP to 4
+# This step closes <details id=3> and opens <details id=4>
+
+# This will run every time we TBD-step-3-event-desc
+# Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
+on:
+  workflow_dispatch:
+  issues:
+    types: [labeled]
+
+permissions:
+  # Need `contents: read` to checkout the repository
+  # Need `contents: write` to update the step metadata
+  contents: write
+
+env:
+  EXPECTED_METADATA: "second joke"
+  
+jobs:
+
+  get_current_step:
+    name: Check current step number
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - id: get_step
+        run: echo "::set-output name=current_step::$(cat ./.github/script/STEP)"
+    outputs:
+      current_step: ${{ steps.get_step.outputs.current_step }}
+      
+  on_my_workflow_run:
+    name: Check if my_workflow has run
+    needs: get_current_step
+    
+    # We will only run this action when:
+    # 1. This repository isn't the template repository
+    # 2. The STEP is currently 2 (see update-step.sh)
+    # Reference https://docs.github.com/en/actions/learn-github-actions/contexts
+    # Reference https://docs.github.com/en/actions/learn-github-actions/expressions
+    if: ${{ github.repository_owner != 'TBD-organization' }} 
+      && needs.get_current_step.outputs.current_step == 6 }}
+
+    # We'll run Ubuntu for performance instead of Mac or Windows
+    runs-on: ubuntu-latest
+
+    steps:
+      # We'll need to check out the repository so that we can edit the README
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Let's get all the branches
+
+      - name: Dump GitHub comment context
+        id: github_comment_step
+        run: echo '${{ toJSON(github.event) }}'
+
+      # Update README to close <details id=6>
+      # and open <details id=7>
+      # and set STEP to '6'
+      - name: Update to step 7
+        if: contains(github.event, ${{ env.EXPECTED_METADATA }})
+        run: ./.github/script/update-step.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FROM_STEP: 6
+          TO_STEP: 7
+          BRANCH_NAME: main
