@@ -130,7 +130,7 @@ Once you have the necessary tools installed locally, follow these steps to begin
 
 </details>
   
-<details id=2>
+<details id=2 open>
 <summary><h2> Step 2: Configure Your Action</h2></summary>
 
 ### Excellent!
