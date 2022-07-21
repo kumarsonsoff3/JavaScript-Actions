@@ -1,12 +1,12 @@
 "use strict";
 
-import getJoke from "./joke";
-import { setOutput } from "@action/core";
+const getJoke = require("./joke");
+const core = require("@action/core");
 
 async function run() {
   const joke = await getJoke();
   console.log(joke);
-  setOutput("joke-output", joke);
+  core.setOutput("joke-output", joke);
 }
 
 run();
