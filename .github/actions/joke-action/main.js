@@ -1,5 +1,3 @@
-"use strict";
-
 const getJoke = require("./joke");
 const core = require("@actions/core");
 
