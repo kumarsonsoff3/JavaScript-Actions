@@ -165,7 +165,7 @@ We will start with using the parameters that are **required** and later implemen
 
 </details>
   
-<details id=3 open>
+<details id=3>
 <summary><h2> Step 3: Create the metadata file</h2></summary>
 
 ## Action metadata
@@ -222,7 +222,7 @@ Our action does not require much metadata for it to run correctly. We will not b
 
 </details>
   
-<details id=4>
+<details id=4 open>
 <summary><h2> Step 4: Create the JavaScript files for your action</h2></summary>
 
 ## Files
