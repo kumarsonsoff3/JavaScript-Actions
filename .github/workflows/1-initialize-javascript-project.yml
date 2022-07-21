@@ -19,7 +19,6 @@ permissions:
   contents: write
 
 jobs:
-
   get_current_step:
     name: Check current step number
     runs-on: ubuntu-latest
@@ -30,17 +29,17 @@ jobs:
         run: echo "::set-output name=current_step::$(cat ./.github/script/STEP)"
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
-  
+
   on_commit_contains_required_dependendencies:
     name: Check if main branch has the required action dependencies
     needs: get_current_step
-    
+
     # We will only run this action when:
     # 1. This repository isn't the template repository
     # 2. The STEP is currently 1 (see update-step.sh)
     # Reference https://docs.github.com/en/actions/learn-github-actions/contexts
     # Reference https://docs.github.com/en/actions/learn-github-actions/expressions
-    if: ${{ github.repository_owner != 'TBD-organization' }} 
+    if: ${{ github.repository_owner != 'TBD-organization' }}
       && needs.get_current_step.outputs.current_step == 1 }}
 
     # We'll run Ubuntu for performance instead of Mac or Windows
@@ -55,14 +54,14 @@ jobs:
       - name: Dump GitHub comment context
         id: github_comment_step
         run: echo '${{ toJSON(github.event) }}'
-     
+
       # Check if NPM package.json exists in the expected location
       - name: Check file existence
         id: check_files
         uses: andstor/file-existence-action@v1
         with:
           files: ".github/actions/joke-action/package.json"
-        
+
       # Update README to close <details id=1>
       # and open <details id=2>
       # and set STEP to '2'
