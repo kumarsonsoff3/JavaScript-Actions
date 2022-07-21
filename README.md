@@ -384,7 +384,7 @@ _Don't forget to call the `run()` function._
 
 </details>
   
-<details id=5 open>
+<details id=5>
 <summary><h2> Step 5: Add your action to the workflow file</h2></summary>
 
 ### Great job!
@@ -417,7 +417,7 @@ jobs:
   
 </details>
   
-<details id=6>
+<details id=6 open>
 
 <summary><h2> Step 6: Trigger the joke action</h2></summary>
 
