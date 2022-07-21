@@ -30,7 +30,7 @@
 - Code Followed their style! 
 - Node Modules are not added to the `.gitignore`
 - Here as you Trigger the workFlow, it will show a Joke in your Console. 😅
-- To Trigger the `Joke-Action` go the [Step 6.]("#trigger")
+- To Trigger the `Joke-Action` go the [Step 6.](#trigger)
 
 
 <!--
